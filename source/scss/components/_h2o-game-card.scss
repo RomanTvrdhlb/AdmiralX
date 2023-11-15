@@ -1,0 +1,172 @@
+.h2o-game-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 2px;
+  position: relative;
+ 
+
+  &__wrapp {
+    position: relative;
+    overflow: hidden;
+
+    &::after,
+    &::before {
+      content: "";
+      inset: 0;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 5;
+    }
+
+    &::before {
+      transition: all 0.2s;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    &:after {
+      border: 1px solid var(--br-a);
+      z-index: 6;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    img,
+    picture {
+      transition: all 0.9s ease;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .h2o-play-button {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s;
+    pointer-events: none;
+    opacity: 0;
+
+    &:hover {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(var(--bg-e), 1);
+    border-radius: 6px;
+    box-shadow: 0 4px 0 0 #988105;
+    height: 18px;
+    width: 181px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -9px;
+    z-index: 15;
+  }
+
+  &__subtitle {
+    color: rgba(var(--cl-b), 1);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    font-family: var(--font-family);
+
+    i {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__payout{
+    background-color: rgba(var(--bg-g),1.0);
+    bottom: 40px;
+    box-shadow: 0 2px 0 #3c1680;
+    color: rgba(var(--cl-d),1.0);
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    height: 24px;
+    padding-left: 7px;
+    padding-top: 6px;
+    position: absolute;
+    right: -5px;
+    text-shadow: 0 2px 0 #2a0271;
+    text-transform: uppercase;
+    width: 115px;
+    pointer-events: none;
+    opacity: 1;
+  
+    &::before, &:after{
+      border-bottom: 11px solid transparent;
+      border-right: 6px solid #3c1680;
+      border-top: 14px solid transparent;
+      content: "";
+      left: -6px;
+      position: absolute;
+      top: 1px;
+    }
+
+    &:after{
+      border-bottom: 10px solid transparent;
+      border-right: 6px solid #603e9c;
+      top: 0;
+    }
+  }
+
+  &__title {
+    color: rgba(var(--cl-a), 1);
+    font-size: 12px;
+    text-align: center;
+    font-family: var(--font-family);
+    line-height: normal;
+    font-weight: 400;
+  }
+
+  &:hover {
+    .h2o-game-card {
+      &__picture {
+        img,
+        picture {
+          transform: scale(1.1);
+        }
+      }
+
+      &__payout{
+       display: none;
+      }
+
+      &__wrapp {
+        &::before,
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    .h2o-play-button {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+
+  &--mounth{
+    .h2o-game-card__title{
+      color: rgba(var(--cl-d),1.0);
+    }
+  }
+}

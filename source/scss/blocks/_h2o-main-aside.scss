@@ -1,0 +1,29 @@
+.h2o-main-aside{
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 95px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 25px;
+    height: fit-content;
+    transition: transform 1s ease-out;
+
+    @include tablet{
+        transform: translate(-110%, -50%);
+        transition: transform .5s ease-out;
+    }
+
+    &.active{
+        @include for-tablet{
+            .h2o-aside-nav{
+                transform: translateX(-110%);
+            }
+        }
+        @include tablet{
+            transform: translate(0, -50%);
+    }
+}
+}

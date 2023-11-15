@@ -1,0 +1,54 @@
+.h2o-small-card{
+    display: flex;
+    grid-gap: 8px;
+
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-gap: 2px;
+    }
+
+    &__image{
+        height: 58px;
+        width: 87px;
+        overflow: hidden;
+        img,
+        picture {
+          transition: all 0.9s ease;
+          height: 100%;
+          width: 100%;
+        }
+
+        &:hover{
+            img,picture{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__title{
+        color: rgba(var(--cl-a),1.0);
+        font-size: 12px;
+        font-family: var(--font-family);
+        line-height: normal;
+        font-weight: 700;
+    }
+
+    &__price{
+        color:  rgba(var(--cl-c),1.0);
+        font-size: 13px;
+        font-family: var(--font-family);
+        line-height: normal;
+        font-weight: 700;
+    }
+
+    &__user{
+        color: rgba(var(--cl-a),1.0);
+        font-size: 12px;
+        font-family: var(--font-family);
+        line-height: normal;
+        font-weight: 700;
+    }
+}

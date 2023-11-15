@@ -1,0 +1,102 @@
+.h2o-header {
+  background: rgba(var(--bg-b), 1);
+  padding: 0 65px 0 30px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  grid-gap: 10px clamp(15px, 2.9126vw, 30px);
+
+  @include tablet{
+    padding: 0;
+    grid-template-columns: 1fr repeat(2, auto);
+  }
+
+  @include mobile{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    grid-gap: 4px;
+
+    @include tablet{
+      order: 2;
+    }
+
+    @include mobile{
+      order: 3;
+      grid-gap: 10px;
+      width: 100%;
+      grid-column: span 2;
+    }
+
+    @include ios{
+      flex-direction: column;
+    }
+  }
+
+  .h2o-green-button {
+    font-size: 12px;
+    font-weight: 700;
+    height: 31px;
+    width: 88px;
+    padding-top: 5px;
+    text-transform: uppercase;
+
+    @include mobile{
+      width: 100%;
+    }
+  }
+
+  .h2o-yellow-button {
+    @include mobile{
+      width: 100%;
+      grid-gap: 5px;
+
+      .h2o-icon-clock{
+        width: 15px;
+        height: 15px;
+        background-position: 0 0;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.h2o-logo {
+  justify-self: end;
+  width: clamp(155px, 20.3883vw, 210px);
+  height: clamp(50px, 7.1845vw, 74px);
+
+
+  img,
+  picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include tablet{
+    order: 1;
+    justify-self: start;
+  }
+  
+  // @include ios{
+  //   width: 160px;
+  //   height: 45px;
+  // }
+
+ 
+}
+
+.h2o-burger{
+  @include tablet{
+    order: 3;
+  }
+
+  @include mobile{
+    order: 2;
+    justify-self: end;
+  }
+}

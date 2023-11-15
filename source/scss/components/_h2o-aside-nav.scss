@@ -1,0 +1,80 @@
+.h2o-aside-nav {
+  background-color: rgba(var(--bg-e), 1);
+  border-radius: 5px;
+  box-shadow: 0 4px 0 0 #988105;
+  min-height: 175px;
+  padding: 12px 0;
+  transition: transform 1s ease-out;
+  transform: none;
+
+  &__item {
+    align-content: center;
+    background-color: #272c36;
+    border-bottom: 0.5px ridge #1c1d20;
+    border-top: 0.5px groove #1c1d20;
+    text-align: center;
+
+    &:hover {
+      background-color: #181c24;
+    }
+  }
+
+  &__link {
+    padding: 8px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &:hover {
+      .h2o-icon {
+        &-home {
+          background-position: 0 -51px;
+        }
+
+        &-games {
+          background-position: -107px -51px;
+        }
+
+        &-action {
+          background-position: -164px -51px;
+        }
+
+        &-tour {
+          background-position: -213px -51px;
+        }
+
+        &-profile {
+          background-position: -265px -51px;
+        }
+
+        &-wallet {
+          background-position: -317px -51px;
+        }
+      }
+
+      .h2o-aside-nav__title {
+        color: rgba(var(--cl-d), 1);
+      }
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    color: rgba(var(--cl-g), 1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 2px;
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 150%;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  &.active{
+    transform: translateX(-110%);
+}
+}

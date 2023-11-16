@@ -1,0 +1,49 @@
+.h2o-main-box{
+    background-color: rgba(var(--bg-o),1.0);
+    padding: clamp(15px, 1.9417vw, 20px) clamp(0px, 5.4369vw, 56px);
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(10px, 1.9417vw, 20px);
+
+    @include mobile{
+      padding: 15px 15px 20px;
+    }
+
+    &--mode{
+      padding: 10px clamp(0px, 5.4369vw, 56px);
+      border-bottom: 2px solid var(--br-c);
+      grid-gap: clamp(20px, 2.9126vw, 30px);    
+      
+      .h2o-red-text{
+        padding-left: 15px;
+      }
+    }
+
+    &__wrapp{
+      padding-top: clamp(10px, 1.9417vw, 20px);
+      display: flex;
+      flex-direction: column;
+      grid-gap: clamp(20px, 2.9126vw, 30px);     
+    }
+    
+    &__contact{
+          display: flex;
+          align-items: center;
+          grid-gap: 20px;
+    }
+
+    .h2o-green-button{
+      height: 42px;   
+      width: 180px;
+      position: relative;
+
+      &::before{
+        position: absolute;
+        content: '*';
+        right: -11px;
+        top: 10px;
+        color: rgba(var(--cl-h),1.0);
+      }
+
+    }
+}

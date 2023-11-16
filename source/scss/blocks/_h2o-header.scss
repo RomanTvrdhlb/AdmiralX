@@ -7,11 +7,12 @@
   grid-gap: 10px clamp(15px, 2.9126vw, 30px);
 
   @include tablet{
-    padding: 0;
+    padding: 0px;
     grid-template-columns: 1fr repeat(2, auto);
   }
 
   @include mobile{
+    padding-bottom: 25px;
     grid-template-columns: repeat(2, 1fr);
   }
 

@@ -7,16 +7,56 @@
 
   <main>
 
+    <aside class="h2o-main-aside">
+      <div class="h2o-players">
+        <span class="h2o-players__title">Игроков онлайн</span>
+        <span class="h2o-players__number">1172</span>
+      </div>
+
+      <ul class="h2o-aside-nav">
+        <li class="h2o-aside-nav__item">
+          <a href="#" class="h2o-aside-nav__link">
+            <span class="h2o-aside-nav__title"><i class="h2o-icon-home"></i>Главная</span>
+          </a>
+        </li>
+        <li class="h2o-aside-nav__item">
+          <a href="#" class="h2o-aside-nav__link">
+            <span class="h2o-aside-nav__title"><i class="h2o-icon-games"></i>Игры</span>
+          </a>
+        </li>
+        <li class="h2o-aside-nav__item">
+          <a href="#" class="h2o-aside-nav__link">
+            <span class="h2o-aside-nav__title"><i class="h2o-icon-action"></i>Акции</span>
+          </a>
+        </li>
+        <li class="h2o-aside-nav__item">
+          <a href="#" class="h2o-aside-nav__link">
+            <span class="h2o-aside-nav__title"><i class="h2o-icon-tour"></i>Турниры</span>
+          </a>
+        </li>
+        <li class="h2o-aside-nav__item">
+          <a href="#" class="h2o-aside-nav__link">
+            <span class="h2o-aside-nav__title"><i class="h2o-icon-profile"></i>Профиль</span>
+          </a>
+        </li>
+        <li class="h2o-aside-nav__item">
+          <a href="#" class="h2o-aside-nav__link">
+            <span class="h2o-aside-nav__title"><i class="h2o-icon-wallet"></i>Касса</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
     <section class="h2o-play-section">
       <div class="h2o-container">
         <div class="h2o-play-section__box">
 
           <div class="h2o-play-card">
-            <h1 class="h2o-play-card__title">XTRA HOT</h1>
+            <h1 class="h2o-play-card__title">Fruit Vegas</h1>
             <div class="h2o-play-card__image">
               <picture>
-                <source type='image/webp' srcset='img/index/spade.webp'>
-                <img width='178' height='159' src='img/index/spade.png' alt='image'>
+                <source type='image/webp' srcset='img/index/vegas.webp'>
+                <img width='278' height='259' src='img/index/vegas.png' alt='image'>
               </picture>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
@@ -38,10 +78,6 @@
   </main>
 
   @include('partials/footer.html')
-  @include('partials/modals.html')
-
-  <button class="h2o-lift h2o-icon-lift" id="upbutton">
-  </button>
 
   <script src="js/main.js"></script>
 </body>

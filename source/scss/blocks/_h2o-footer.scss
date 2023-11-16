@@ -1,13 +1,14 @@
 footer{
   padding-bottom: 10px;
   background-color: rgba(var(--bg-h),1.0);
+  overflow: hidden;
 }
 
 .h2o-footer{
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  grid-gap: 35px;
+  grid-gap: clamp(10px, 3.3981vw, 35px);
   position: relative;
  
 
@@ -24,6 +25,7 @@ footer{
     margin-top: 5px;
     width: 100%;
     position: relative;
+    display: flex;
 
     &::before, &::after{
       background-color: rgba(var(--bg-i),1.0);
@@ -41,6 +43,14 @@ footer{
 
     &::after{
       top: -24px;
+
+      @include mobile{
+        top: -20px;
+      }
+    }
+
+    @include small-tablet{
+      justify-content: center;
     }
   }
 
@@ -54,5 +64,9 @@ footer{
     left: 50%;
     transform: translateX(-50%);
     top: 1px;
+
+    @include mobile{
+      display: none;
+    }
   }
 }

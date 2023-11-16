@@ -44,6 +44,27 @@
   }
 }
 
+.h2o-red-button {
+  color: rgba(var(--cl-a), 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 225px;
+  z-index: 2;
+  background-color: rgba(var(--bg-p),1.0);
+  box-shadow: 0 3px 0 0 #960000;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  font-family: var(--font-family2);
+  text-align: center;
+  font-size: 16px;
+
+  &:hover {
+    background-color: rgba(var(--bg-r),1.0);
+  }
+}
+
 
 .h2o-play-button{
   border-bottom: 30px solid transparent;

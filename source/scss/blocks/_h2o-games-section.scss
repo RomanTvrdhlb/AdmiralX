@@ -4,12 +4,27 @@
 
     &__box{
         display: grid;
-        grid-template-columns: 1fr 243px;
-        grid-gap: 30px clamp(15px, 2.9126vw, 30px);
+        grid-template-columns: 3.1fr minmax(220px, 1fr);
+        grid-gap: clamp(20px, 2.9126vw, 30px) clamp(15px, 2.9126vw, 30px);
 
         .h2o-green-button{
             grid-column: span 2;
             justify-self: center;
+
+            @include tablet{
+                order: 3;
+                grid-column: initial;
+            }
+        }
+
+        @include tablet{
+            grid-template-columns: 2.05fr 1fr;
+            grid-template-columns: 1fr;
+        }
+
+        @include small-tablet{
+            grid-gap:14px clamp(15px, 2.9126vw, 30px);
+            grid-template-columns: 100%;
         }
     }
 
@@ -18,5 +33,16 @@
         flex-direction: column;
         justify-content: space-between;
         grid-gap: 14px;
+
+        @include tablet{
+            order: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+        }
+
+
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
     }
 }

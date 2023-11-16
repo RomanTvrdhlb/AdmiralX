@@ -1,17 +1,15 @@
 .h2o-about-section{
-    padding: 10px 0 30px;
+    padding: 0 0 clamp(20px, 2.9126vw, 30px);
 
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: 16px;
+        grid-gap: clamp(10px, 2.9126vw, 30px);
     }
 
     &__inner{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(20px, 3.2823vw, 30px);
-        padding-bottom: 14px;
     }
 
 

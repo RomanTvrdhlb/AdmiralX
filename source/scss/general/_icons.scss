@@ -93,11 +93,67 @@
 
   &-currency{
     background-image: url(../img/index/jackpot.png);
-    background-position: 0 -65px;
+    background-position: 0 calc(clamp(54px, 6.3107vw, 65px) * -1); 
     background-size: cover;
     background-repeat: no-repeat;
-    width: 32px;
-    height: 40px;
+    width: clamp(26px, 3.1068vw, 32px);
+    height: clamp(30px, 3.8835vw, 40px);
+    display: block;
+  }
+
+  &-info{
+    background-image: url(../img/index/info.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+  
+  &-contacts{
+    background-image: url(../img/index/contacts.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 31px;
+    display: block;
+  }
+
+  &-mail{
+    background-image: url(../img/index/contacts.png);
+    background-position: 0 -67px;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 31px;
+    display: block;
+  }
+
+  &-arrow{
+    background-image: url(../img/index/arrow.png);
+    background-position: center  center;
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 14px;
+    display: block;
+    filter: brightness(500%);
+  }
+
+  &-acc{
+    background-image: url(../img/sprite/arrow.svg);
+    background-position: center  center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 28px;
+    height: 14px;
+    display: block;
+  }
+
+  &-chat{
+    background-image: url(../img/index/contacts.png);
+    background-position: 0 -99px;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 31px;
     display: block;
   }
 

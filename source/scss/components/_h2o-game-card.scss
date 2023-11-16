@@ -4,11 +4,16 @@
   flex-direction: column;
   grid-gap: 2px;
   position: relative;
+  max-height: 177px;
  
+  @include tablet{
+    height: fit-content;
+  }
 
   &__wrapp {
     position: relative;
     overflow: hidden;
+    width: 100%;
 
     &::after,
     &::before {

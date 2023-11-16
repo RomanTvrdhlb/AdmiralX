@@ -1,5 +1,5 @@
 .h2o-games-section{
-    padding-bottom: 30px;
+    padding-bottom: clamp(20px, 2.9126vw, 30px);
 
 
     &__box{

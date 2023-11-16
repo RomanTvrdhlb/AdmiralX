@@ -4,7 +4,7 @@
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(10px, 2.9126vw, 30px);
+        grid-gap: clamp(15px, 2.9126vw, 30px);
     }
 
     &__inner{
